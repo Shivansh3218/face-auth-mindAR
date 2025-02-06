@@ -1,38 +1,114 @@
 /* App.css */
-.app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: system-ui, -apple-system, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.button-group {
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.auth-container form {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.app-button {
-  flex: 1;
-  padding: 12px;
+.auth-container input {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+button {
+  padding: 12px 20px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  background: #e5e7eb;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.app-button.active {
+.action-button {
   background: #3b82f6;
   color: white;
+  width: 100%;
+}
+
+.action-button:hover {
+  background: #2563eb;
+}
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #1a1a1a;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.secondary-button:hover {
+  background: #cbd5e1;
+}
+
+.link-button {
+  background: none;
+  color: #3b82f6;
+  padding: 4px 8px;
+  font-weight: normal;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 16px;
+  color: #666;
+}
+
+.camera-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.camera-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .video-wrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  background: #000;
+  background: black;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -52,37 +128,34 @@
 .controls {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.action-button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  background: #3b82f6;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.action-button:hover {
-  transform: translateY(-1px);
-}
-
-.preview {
-  width: 100%;
-}
-
-.preview-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.success-message {
+.home-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
   text-align: center;
-  color: #10b981;
-  font-weight: 500;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-container h1 {
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.home-container p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .auth-container,
+  .camera-container,
+  .home-container {
+    margin: 20px;
+    padding: 20px;
+  }
 }
