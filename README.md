@@ -16,7 +16,7 @@ A React application that implements face recognition-based authentication using 
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/Shivansh3218/face-auth-mindAR.git
 cd face-auth-react
 ```
 
